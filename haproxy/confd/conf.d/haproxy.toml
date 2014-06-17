@@ -1,0 +1,8 @@
+[template]
+src = "haproxy.cfg.tmpl"
+dest = "/data/haproxy/haproxy.cfg"
+owner = "root"
+group = "root"
+mode = "0644"
+keys = ["/app"]
+reload_cmd = "/etc/init.d/haproxy reload"
