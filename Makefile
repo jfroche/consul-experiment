@@ -3,6 +3,8 @@
 build-haproxy: haproxy/.build
 
 haproxy/.build: 
+	mkdir -p ./data/haproxy/haproxy
+	mkdir -p ./data/haproxy/consul-haproxy
 	docker build -t jfroche/haproxy-consul haproxy
 	touch $@
 
