@@ -1,0 +1,2 @@
+data/haproxy/log/supervisor/*.err
+data/haproxy/log/supervisor/*.out
