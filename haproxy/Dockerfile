@@ -15,7 +15,7 @@ RUN \
   sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
 # Define mountable directories.
-VOLUME ["/etc/supervisor/conf.d"]
+VOLUME ["/data", "/etc/supervisor/conf.d"]
 
 # Define working directory.
 WORKDIR /etc/supervisor/conf.d
@@ -24,4 +24,4 @@ WORKDIR /etc/supervisor/conf.d
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
 
 #CMD /usr/local/sbin/consul agent -bootstrap -server -data-dir=/tmp/consul -client=0.0.0.0
-#EXPOSE 8400 8500 8600/udp
+EXPOSE 8400 8500 8600/udp
